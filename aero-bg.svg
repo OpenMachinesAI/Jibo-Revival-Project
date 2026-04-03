@@ -1,0 +1,45 @@
+<svg width="2048" height="1152" viewBox="0 0 2048 1152" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frutiogo Aero background">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="2048" y2="1152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d9f6ff"/>
+      <stop offset="0.35" stop-color="#13c8ff"/>
+      <stop offset="1" stop-color="#006d86"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1500 740) rotate(90) scale(420 520)">
+      <stop stop-color="#17f0ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#17f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#aef2ff" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#46c6f4" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="2048" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="2048" height="1152" fill="url(#sky)"/>
+  <rect width="2048" height="1152" fill="url(#glow)"/>
+  <circle cx="430" cy="650" r="160" fill="url(#bubble)"/>
+  <circle cx="675" cy="920" r="118" fill="url(#bubble)"/>
+  <circle cx="990" cy="870" r="110" fill="url(#bubble)"/>
+  <circle cx="1480" cy="690" r="92" fill="url(#bubble)"/>
+  <circle cx="1760" cy="620" r="108" fill="url(#bubble)"/>
+  <circle cx="1270" cy="900" r="62" fill="url(#bubble)"/>
+  <circle cx="1720" cy="860" r="46" fill="#baf9ff" fill-opacity="0.55"/>
+  <circle cx="1880" cy="980" r="58" fill="#baf9ff" fill-opacity="0.42"/>
+  <path d="M0 520C200 390 410 330 650 360C860 384 1070 498 1290 520C1510 540 1700 500 2048 260" stroke="url(#wave)" stroke-width="2"/>
+  <path d="M0 560C180 420 420 370 640 395C900 425 1090 520 1290 548C1540 582 1750 535 2048 300" stroke="url(#wave)" stroke-width="1.3"/>
+  <path d="M0 610C220 455 430 410 680 438C910 465 1130 550 1340 574C1600 604 1790 556 2048 350" stroke="url(#wave)" stroke-width="1.15"/>
+  <path d="M0 660C250 510 460 470 720 495C960 518 1170 596 1390 616C1650 640 1830 585 2048 395" stroke="url(#wave)" stroke-width="1"/>
+  <path d="M0 710C270 565 490 530 750 548C990 564 1210 636 1450 652C1700 668 1870 618 2048 445" stroke="url(#wave)" stroke-width="0.9"/>
+  <path d="M0 760C300 620 520 590 790 605C1040 620 1240 686 1500 700C1760 712 1910 670 2048 500" stroke="url(#wave)" stroke-width="0.8"/>
+  <path d="M1420 500C1380 620 1360 760 1380 950C1392 1035 1460 1120 1600 1152" stroke="#ffffff" stroke-opacity="0.36" stroke-width="7"/>
+  <path d="M1520 420C1460 560 1440 720 1465 980C1470 1055 1510 1110 1585 1152" stroke="#ffffff" stroke-opacity="0.28" stroke-width="4"/>
+  <path d="M1690 470C1595 610 1565 775 1590 1040C1600 1100 1640 1140 1708 1152" stroke="#ffffff" stroke-opacity="0.24" stroke-width="5"/>
+  <path d="M0 460C180 360 360 285 570 250C820 208 1140 255 1420 300C1670 338 1890 330 2048 108" stroke="#ffffff" stroke-opacity="0.82" stroke-width="1.1"/>
+  <path d="M0 478C175 375 355 300 560 264C815 220 1130 266 1425 315C1680 355 1898 350 2048 120" stroke="#ffffff" stroke-opacity="0.72" stroke-width="0.8"/>
+  <path d="M0 498C170 395 350 320 552 286C805 244 1120 288 1418 335C1678 372 1900 366 2048 142" stroke="#ffffff" stroke-opacity="0.56" stroke-width="0.7"/>
+  <path d="M0 520C165 415 345 340 545 308C795 268 1115 310 1410 355C1675 390 1898 386 2048 164" stroke="#ffffff" stroke-opacity="0.44" stroke-width="0.6"/>
+</svg>

@@ -12,8 +12,8 @@ const authors = {
   zm: { name: "Zetoman", initials: "ZM", role: "" },
   ad: { name: "Ander", initials: "AD", role: "" },
   sd: {
-    name: "Sniperdude",
-    initials: "SD",
+    name: "Alex Rose (aka Jibo Dentist)",
+    initials: "AR",
     pfp: "https://example.com/sniperdude.jpg",
     url: "https://example.com/sniperdude",
     role: "Website Help"
@@ -32,7 +32,7 @@ const commits = [
   {
     date: "2026-03-03",
     categories: ["Board", "Firmware"],
-    summary: "BOOTROM dump was a lost battle. The project is currently trying to get a custom version of U-Boot working.",
+    summary: "BOOTROM dump was a lost battle. The team is currently trying to get a custom version of U-Boot working.",
     authors: ["kk"]
   },
   {

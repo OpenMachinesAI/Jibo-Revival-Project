@@ -4,6 +4,8 @@ const commitList = document.getElementById("commit-list");
 const helpersGrid = document.getElementById("helpers-grid");
 const themeToggle = document.getElementById("theme-toggle");
 const themeMenu = document.getElementById("theme-menu");
+const musicToggle = document.getElementById("music-toggle");
+const archiveTheme = document.getElementById("archive-theme");
 const usableUrl = (value) => (value && !value.includes("example.com") ? value : "");
 const themeKey = "jibo-revival-theme";
 
@@ -98,3 +100,24 @@ document.addEventListener("click", (event) => {
   if (themeMenu.contains(event.target) || themeToggle.contains(event.target)) return;
   setMenuOpen(false);
 });
+
+if (musicToggle && archiveTheme) {
+  musicToggle.addEventListener("click", async () => {
+    if (archiveTheme.paused) {
+      try {
+        await archiveTheme.play();
+        musicToggle.setAttribute("aria-pressed", "true");
+      } catch {
+        musicToggle.setAttribute("aria-pressed", "false");
+      }
+    } else {
+      archiveTheme.pause();
+      archiveTheme.currentTime = 0;
+      musicToggle.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  archiveTheme.addEventListener("ended", () => {
+    musicToggle.setAttribute("aria-pressed", "false");
+  });
+}

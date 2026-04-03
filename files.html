@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Jibo Files</title>
+    <meta
+      name="description"
+      content="A classified-style archive page for Jibo-related files, videos, SDKs, and historical material."
+    />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="files-page" data-theme="default">
+    <button class="music-toggle" id="music-toggle" type="button" aria-label="Play archive theme" aria-pressed="false">
+      <span aria-hidden="true">♫</span>
+    </button>
+    <audio id="archive-theme" src="audio/Jibo-Files-Theme.mp3" preload="auto"></audio>
+
+    <div class="page-shell page-shell--files">
+      <header class="files-hero">
+        <p class="files-hero__stamp">CLASSIFIED ARCHIVE / JIBO</p>
+        <h1>The Jibo Files</h1>
+        <p class="files-hero__lede">
+          A sealed archive of recovered Jibo material. Browse the files, watch the footage, and inspect the SDKs and
+          community repositories that preserved parts of Jibo's past.
+        </p>
+        <div class="files-hero__meta">
+          <span>Archive status: active</span>
+          <span>Access level: community</span>
+          <span>Catalog format: browsable</span>
+        </div>
+      </header>
+
+      <main class="files-layout">
+        <section class="archive-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Recovered Files</p>
+            <h2>Core archived materials</h2>
+          </div>
+          <div class="file-grid">
+            <article class="file-card">
+              <p class="file-card__tag">Package</p>
+              <h3>jibo-sdk-1.7.4.zip</h3>
+              <p>One of the recovered SDK packages from the archive, useful for historical tooling and reference.</p>
+              <a class="download-link" href="files/jibo-sdk-1.7.4.zip" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">Package</p>
+              <h3>jibo-sdk-3.9.10.tgz</h3>
+              <p>Later SDK archive bundle, representing one of the major preserved Jibo developer drops.</p>
+              <a class="download-link" href="files/jibo-sdk-3.9.10.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">Framework</p>
+              <h3>jibo-client-framework-1.4.2.tgz</h3>
+              <p>Client-side framework archive for Jibo-related tooling and application support.</p>
+              <a class="download-link" href="files/jibo-client-framework-1.4.2.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">Framework</p>
+              <h3>jibo-service-framework-1.3.1.tgz</h3>
+              <p>Service framework package used for the platform's background service layer.</p>
+              <a class="download-link" href="files/jibo-service-framework-1.3.1.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">System</p>
+              <h3>jibo-state-machine-3.4.1.tgz</h3>
+              <p>State-machine archive for robot behavior orchestration and runtime flow control.</p>
+              <a class="download-link" href="files/jibo-state-machine-3.4.1.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">Tools</p>
+              <h3>jibo-tools-2.4.5.tgz</h3>
+              <p>Utility bundle for maintaining and inspecting Jibo-related software and content.</p>
+              <a class="download-link" href="files/jibo-tools-2.4.5.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">Background</p>
+              <h3>jibo-background-0.1.5.tgz</h3>
+              <p>Background package preserved as part of the historical Jibo software collection.</p>
+              <a class="download-link" href="files/jibo-background-0.1.5.tgz" download>Download</a>
+            </article>
+            <article class="file-card">
+              <p class="file-card__tag">OS</p>
+              <h3>jibo-3.0.9.tgz</h3>
+              <p>Operating system archive from the Jibo collection, kept here for reference and restoration work.</p>
+              <a class="download-link" href="files/jibo-3.0.9.tgz" download>Download</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="archive-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Video Vault</p>
+            <h2>Footage and channel links</h2>
+          </div>
+          <div class="media-grid">
+            <a class="media-card" href="https://www.youtube.com/watch?v=3lTh6t-7zAM&si=L79tLwbfULcDFrgR" target="_blank" rel="noreferrer">
+              <p class="file-card__tag">Video</p>
+              <h3>how-did-a-jibo</h3>
+              <p>Recorded Jibo footage from the archive for reference and historical context.</p>
+            </a>
+            <a class="media-card" href="https://www.youtube.com/@jibodevelopers23?si=-PAE3tprzVUuyQvh" target="_blank" rel="noreferrer">
+              <p class="file-card__tag">Channel</p>
+              <h3>Jibo Developers</h3>
+              <p>The video channel collecting Jibo-related uploads and community material.</p>
+            </a>
+            <a class="media-card" href="files/how-did-a-jibo (1).mp4" download>
+              <p class="file-card__tag">Local File</p>
+              <h3>how-did-a-jibo (1).mp4</h3>
+              <p>Local video file from your downloads, included here as a direct archive item.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="archive-panel">
+          <div class="section-heading">
+            <p class="eyebrow">GitHub Vault</p>
+            <h2>Jibo-related repositories</h2>
+          </div>
+          <div class="repo-grid">
+            <article class="repo-card">
+              <p class="file-card__tag">Repository</p>
+              <h3>stacywebb/Jibo</h3>
+              <p>Collection of Jibo-related packages and archived software. Top-level items include SDK, background, client framework, dev, tools, service framework, state machine, and OS packages.</p>
+              <ul>
+                <li>README.md</li>
+                <li>jibo-3.0.9.tgz</li>
+                <li>jibo-background-0.1.5.tgz</li>
+                <li>jibo-client-framework-1.4.2.tgz</li>
+                <li>jibo-dev-2.1.4.tgz</li>
+                <li>jibo-sdk-0.0.1-security.tgz</li>
+                <li>jibo-sdk-1.7.1.zip</li>
+                <li>jibo-sdk-1.7.4.zip</li>
+                <li>jibo-sdk-3.9.10.tgz</li>
+                <li>jibo-service-framework-1.3.1.tgz</li>
+                <li>jibo-state-machine-3.4.1.tgz</li>
+                <li>jibo-tools-2.4.5.tgz</li>
+              </ul>
+            </article>
+            <article class="repo-card">
+              <p class="file-card__tag">Repository</p>
+              <h3>jefniro/jibo-sdk</h3>
+              <p>SDK repository with the project structure preserved as folders and root assets.</p>
+              <ul>
+                <li>bin/</li>
+                <li>docs/</li>
+                <li>gating/</li>
+                <li>grammars/</li>
+                <li>images/</li>
+                <li>keymaps/</li>
+                <li>lib/</li>
+                <li>menus/</li>
+                <li>settings/</li>
+                <li>styles/</li>
+                <li>.jshintrc</li>
+                <li>.npmignore</li>
+                <li>LICENSE.txt</li>
+                <li>README.gif</li>
+                <li>README.md</li>
+                <li>os-arch.json</li>
+                <li>package.json</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="site-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
