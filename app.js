@@ -78,28 +78,31 @@ Object.values(authors).forEach((author) => {
 });
 
 const setMenuOpen = (open) => {
+  if (!themeMenu || !themeToggle) return;
   themeMenu.hidden = !open;
   themeToggle.setAttribute("aria-expanded", String(open));
 };
 
 document.body.dataset.theme = document.body.dataset.theme || "default";
 
-themeToggle.addEventListener("click", () => {
-  setMenuOpen(themeMenu.hidden);
-});
+if (themeToggle && themeMenu) {
+  themeToggle.addEventListener("click", () => {
+    setMenuOpen(themeMenu.hidden);
+  });
 
-themeMenu.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-theme]");
-  if (!button) return;
-  applyTheme(button.dataset.theme);
-  setMenuOpen(false);
-});
+  themeMenu.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-theme]");
+    if (!button) return;
+    applyTheme(button.dataset.theme);
+    setMenuOpen(false);
+  });
 
-document.addEventListener("click", (event) => {
-  if (themeMenu.hidden) return;
-  if (themeMenu.contains(event.target) || themeToggle.contains(event.target)) return;
-  setMenuOpen(false);
-});
+  document.addEventListener("click", (event) => {
+    if (themeMenu.hidden) return;
+    if (themeMenu.contains(event.target) || themeToggle.contains(event.target)) return;
+    setMenuOpen(false);
+  });
+}
 
 if (musicToggle && archiveTheme) {
   musicToggle.addEventListener("click", async () => {

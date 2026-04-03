@@ -25,7 +25,8 @@
 
     <div class="page-shell page-shell--files">
       <header class="files-hero">
-        <p class="files-hero__stamp">CLASSIFIED ARCHIVE / JIBO</p>
+        <div class="files-hero__filetab">FILE CABINET 04 / CLASSIFIED</div>
+        <p class="files-hero__stamp">EYES ONLY / COMMUNITY ARCHIVE</p>
         <h1>The Jibo Files</h1>
         <p class="files-hero__lede">
           A sealed archive of recovered Jibo material. Browse the files, watch the footage, and inspect the SDKs and
@@ -39,8 +40,24 @@
       </header>
 
       <main class="files-layout">
+        <aside class="archive-side">
+          <div class="archive-side__panel">
+            <p class="archive-side__title">ARCHIVE STATUS</p>
+            <p class="archive-side__value">OPEN FOR REVIEW</p>
+            <div class="archive-side__redactions"></div>
+          </div>
+          <div class="archive-side__panel">
+            <p class="archive-side__title">FILE INDEX</p>
+            <ul>
+              <li><a href="#core-files">Core files</a></li>
+              <li><a href="#video-vault">Video vault</a></li>
+              <li><a href="#github-vault">GitHub vault</a></li>
+            </ul>
+          </div>
+        </aside>
+
         <section class="archive-panel">
-          <div class="section-heading">
+          <div class="section-heading" id="core-files">
             <p class="eyebrow">Recovered Files</p>
             <h2>Core archived materials</h2>
           </div>
@@ -96,7 +113,7 @@
           </div>
         </section>
 
-        <section class="archive-panel">
+        <section class="archive-panel" id="video-vault">
           <div class="section-heading">
             <p class="eyebrow">Video Vault</p>
             <h2>Footage and channel links</h2>
@@ -120,7 +137,7 @@
           </div>
         </section>
 
-        <section class="archive-panel">
+        <section class="archive-panel" id="github-vault">
           <div class="section-heading">
             <p class="eyebrow">GitHub Vault</p>
             <h2>Jibo-related repositories</h2>

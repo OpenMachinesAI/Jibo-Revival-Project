@@ -629,21 +629,21 @@ body[data-theme="aero"] .footer {
 .footer-sep { margin: 0 8px; color: rgba(245, 251, 255, 0.38); }
 
 .files-page {
-  --bg: #05080c;
-  --bg-2: #0b111b;
-  --bg-3: #111827;
-  --panel: rgba(8, 13, 22, 0.82);
-  --panel-strong: #d8f3ff;
-  --text: #e7f3ff;
-  --muted: #92abc4;
-  --line: rgba(145, 188, 222, 0.18);
-  --accent: #36d7ff;
-  --accent-deep: #7fe8ff;
-  --accent-soft: rgba(54, 215, 255, 0.1);
-  --shadow: 0 24px 54px rgba(0, 0, 0, 0.52);
+  --bg: #0a0b0c;
+  --bg-2: #0c0d10;
+  --bg-3: #111214;
+  --panel: rgba(8, 9, 12, 0.92);
+  --panel-strong: #f1e5b8;
+  --text: #efe7cf;
+  --muted: #b9ad8a;
+  --line: rgba(229, 214, 168, 0.18);
+  --accent: #e0c36a;
+  --accent-deep: #f0dd95;
+  --accent-soft: rgba(224, 195, 106, 0.12);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.68);
   background:
-    radial-gradient(circle at top, rgba(54, 215, 255, 0.16), transparent 30%),
-    linear-gradient(180deg, #05080c 0%, #0a1018 100%);
+    radial-gradient(circle at top, rgba(255, 231, 141, 0.08), transparent 24%),
+    linear-gradient(180deg, #090a0c 0%, #0c0d10 100%);
 }
 
 .files-page .theme-toggle,
@@ -651,24 +651,50 @@ body[data-theme="aero"] .footer {
   display: none;
 }
 
+.files-page .page-shell {
+  padding-top: 12px;
+}
+
 .page-shell--files {
-  width: min(1220px, calc(100% - 24px));
+  width: min(1280px, calc(100% - 20px));
 }
 
 .files-hero {
   margin: 18px 0 18px;
   padding: 28px;
-  border-radius: 28px;
-  border: 1px solid rgba(119, 190, 230, 0.18);
+  border-radius: 12px;
+  border: 1px solid rgba(240, 221, 149, 0.16);
   background:
-    linear-gradient(180deg, rgba(10, 17, 28, 0.92), rgba(3, 7, 12, 0.96)),
-    radial-gradient(circle at top right, rgba(54, 215, 255, 0.2), transparent 30%);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.58);
+    linear-gradient(180deg, rgba(18, 18, 16, 0.96), rgba(8, 8, 8, 0.98)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 2px,
+      transparent 2px,
+      transparent 18px
+    );
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.72);
+}
+
+.files-hero__filetab {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(240, 221, 149, 0.2);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #111214;
+  color: #f0dd95;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 .files-hero__stamp {
   margin: 0 0 10px;
-  color: #7fe8ff;
+  color: #f0dd95;
   font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -678,7 +704,7 @@ body[data-theme="aero"] .footer {
 .files-hero h1 {
   margin: 0;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: 0.92;
   letter-spacing: -0.06em;
 }
@@ -686,7 +712,7 @@ body[data-theme="aero"] .footer {
 .files-hero__lede {
   max-width: 70ch;
   margin: 14px 0 0;
-  color: #b8cfdf;
+  color: #d5ccae;
   line-height: 1.65;
 }
 
@@ -699,24 +725,84 @@ body[data-theme="aero"] .footer {
 
 .files-hero__meta span {
   padding: 8px 12px;
-  border: 1px solid rgba(127, 232, 255, 0.22);
+  border: 1px solid rgba(240, 221, 149, 0.18);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #d6f7ff;
+  background: rgba(255, 255, 255, 0.03);
+  color: #efe7cf;
   font-size: 0.88rem;
 }
 
 .files-layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
+  align-items: start;
+}
+
+.archive-side {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.archive-side__panel {
+  padding: 18px;
+  border: 1px solid rgba(240, 221, 149, 0.16);
+  border-radius: 12px;
+  background: rgba(12, 12, 12, 0.94);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
+}
+
+.archive-side__title {
+  margin: 0 0 8px;
+  color: #f0dd95;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.archive-side__value {
+  margin: 0;
+  font-family: "Syne", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.archive-side__redactions {
+  margin-top: 14px;
+  height: 96px;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, #000 0 18px, transparent 18px 28px, #000 28px 44px, transparent 44px 54px, #000 54px 70px, transparent 70px 96px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+}
+
+.archive-side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.archive-side li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(240, 221, 149, 0.08);
+  color: #efe7cf;
 }
 
 .archive-panel {
   padding: 22px;
-  border-radius: 26px;
-  border: 1px solid var(--line);
-  background: rgba(5, 10, 16, 0.82);
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  border: 1px solid rgba(240, 221, 149, 0.14);
+  background:
+    linear-gradient(180deg, rgba(7, 7, 7, 0.96), rgba(14, 14, 14, 0.94)),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0 1px, transparent 1px 28px);
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.5);
 }
 
 .file-grid,
@@ -727,24 +813,27 @@ body[data-theme="aero"] .footer {
 }
 
 .file-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .media-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .repo-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .file-card,
 .media-card,
 .repo-card {
-  padding: 18px;
-  border-radius: 20px;
-  border: 1px solid rgba(122, 198, 230, 0.16);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(54, 215, 255, 0.03));
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 221, 149, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)),
+    #0d0d0d;
+  min-height: 210px;
 }
 
 .download-link {
@@ -766,7 +855,7 @@ body[data-theme="aero"] .footer {
 
 .file-card__tag {
   margin: 0 0 10px;
-  color: #7fe8ff;
+  color: #f0dd95;
   font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -778,22 +867,60 @@ body[data-theme="aero"] .footer {
 .repo-card h3 {
   margin: 0 0 10px;
   font-family: "Syne", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.28rem;
+  line-height: 1.08;
 }
 
 .file-card p,
 .media-card p,
 .repo-card p {
   margin: 0;
-  color: #a6bfd1;
-  line-height: 1.6;
+  color: #c8c0a7;
+  line-height: 1.7;
+  max-width: 42ch;
 }
 
 .repo-card ul {
-  margin: 14px 0 0;
+  margin: 16px 0 0;
   padding-left: 18px;
-  color: #cfeaff;
-  line-height: 1.6;
+  color: #efe7cf;
+  line-height: 1.7;
+  columns: 2;
+  column-gap: 34px;
+}
+
+.file-card {
+  position: relative;
+}
+
+.file-card::after {
+  content: "RESTRICTED";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 5px 8px;
+  border: 1px solid rgba(240, 221, 149, 0.18);
+  color: #f0dd95;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.media-card {
+  position: relative;
+}
+
+.media-card::before {
+  content: "MEDIA";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: #f0dd95;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.72;
 }
 
 .repo-card li {
@@ -801,10 +928,46 @@ body[data-theme="aero"] .footer {
 }
 
 @media (max-width: 980px) {
+  .files-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-side {
+    grid-template-columns: 1fr;
+  }
+
   .file-grid,
   .media-grid,
   .repo-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .repo-card ul {
+    columns: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .files-layout {
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  }
+
+  .archive-side {
+    grid-template-columns: 1fr;
+    position: sticky;
+    top: 18px;
+  }
+
+  .archive-panel:first-of-type {
+    grid-column: 2;
+  }
+
+  .archive-panel:nth-of-type(2) {
+    grid-column: 2;
+  }
+
+  .archive-panel:nth-of-type(3) {
+    grid-column: 2;
   }
 }
 
@@ -812,13 +975,17 @@ body[data-theme="aero"] .footer {
   .files-hero,
   .archive-panel {
     padding: 18px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .file-grid,
   .media-grid,
   .repo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .repo-card ul {
+    columns: 1;
   }
 
   .files-hero h1 {
