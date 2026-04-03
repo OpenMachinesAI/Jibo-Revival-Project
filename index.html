@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jibo Revival Project</title>
+    <meta
+      name="description"
+      content="A community effort to revive Jibo through documentation, firmware work, shared research, and an active developer community."
+    />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Open theme menu" aria-expanded="false">
+      <span aria-hidden="true">⚙</span>
+    </button>
+    <div class="theme-menu" id="theme-menu" hidden>
+      <button type="button" class="theme-menu__item" data-theme="aero">Frutiogo Aero</button>
+      <button type="button" class="theme-menu__item" data-theme="dark">Dark Theme</button>
+    </div>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="#top">
+            <img class="brand__logo" src="logo.svg" alt="" aria-hidden="true" />
+            <span>Jibo Revival Project</span>
+          </a>
+          <div class="topbar__links">
+            <a href="#updates">Updates</a>
+            <a href="#resources">Resources</a>
+            <a href="#helpers">Helpers</a>
+          </div>
+        </nav>
+
+        <section class="hero__content" id="top">
+          <div class="hero__copy">
+            <p class="eyebrow">Community Endeavor</p>
+            <h1>Bringing Jibo back with firmware research, shared tools, and an active community.</h1>
+            <p class="hero__lede">
+              This project is focused on restoring and extending the world’s first social robot. Developers,
+              enthusiasts, and former owners are working together to document the platform, recover system
+              access, and push the robot toward a usable future again.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">Join Discord</a>
+              <a class="button button--ghost" href="https://kevinblog.sytes.net/Jibo/JiboDocs/jibo-reval-project/welcome.html" target="_blank" rel="noreferrer">Open Docs</a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="hero-card hero-card--image">
+              <div class="hero-card__glow"></div>
+              <img
+                src="https://kevinblog.sytes.net/Jibo/img/jibo-hi-tech-570px.webp"
+                alt="Jibo robot"
+              />
+            </div>
+            <div class="hero-card hero-card--status">
+              <p class="status-label">Overall Completion</p>
+              <div class="progress-track" aria-hidden="true">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+              <p class="status-value" id="progress-label">Loading progress...</p>
+              <p class="status-note">
+                Current public status pulled from the original project page and presented here in a clearer format.
+              </p>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="panel panel--updates" id="updates">
+          <div class="section-heading">
+            <p class="eyebrow">Latest Work</p>
+            <h2>What the project is working on right now</h2>
+          </div>
+          <div class="updates-grid">
+            <article class="feature-card">
+              <p class="feature-card__label">Focus Area</p>
+              <h3>Board and firmware recovery</h3>
+              <p>
+                The original site’s latest logs show the current effort centered on Jibo’s board-level access and
+                boot process, including BOOTROM dumping attempts and work toward a custom U-Boot path.
+              </p>
+            </article>
+            <div class="timeline" id="commit-list"></div>
+          </div>
+        </section>
+
+        <section class="panel panel--resources" id="resources">
+          <div class="section-heading">
+            <p class="eyebrow">Project Hub</p>
+            <h2>The main places to follow, read, and participate</h2>
+          </div>
+          <div class="resource-grid">
+            <a class="resource-card" href="https://kevinblog.sytes.net/Jibo/JiboDocs/jibo-reval-project/welcome.html" target="_blank" rel="noreferrer">
+              <p class="resource-card__kicker">Documentation</p>
+              <h3>Research docs and technical guides</h3>
+              <p>Mainly research docs, technical guides, API references, and setup instructions as the project grows.</p>
+            </a>
+            <a class="resource-card" href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">
+              <p class="resource-card__kicker">Discord Server</p>
+              <h3>Developer and community chat</h3>
+              <p>Chat directly with developers and community members working on the revival effort.</p>
+            </a>
+            <a class="resource-card" href="https://www.reddit.com/r/Jibo/" target="_blank" rel="noreferrer">
+              <p class="resource-card__kicker">Reddit Community</p>
+              <h3>Broader public discussion</h3>
+              <p>Discuss Jibo with the wider subreddit community. This is not affiliated with the project itself.</p>
+            </a>
+            <a class="resource-card" href="mailto:kevinkor6346789@gmail.com">
+              <p class="resource-card__kicker">Direct Contact</p>
+              <h3>Email the project lead</h3>
+              <p>Discord is preferred, but direct email is available when needed.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel panel--helpers" id="helpers">
+          <div class="section-heading">
+            <p class="eyebrow">Community Helpers</p>
+            <h2>The people supporting the revival effort</h2>
+          </div>
+          <div class="helpers-grid" id="helpers-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© 2026 Jibo Revival Project</p>
+        <p>
+          Contact:
+          <a href="mailto:kevinkor6346789@gmail.com">kevinkor6346789@gmail.com</a>
+          <span class="footer-sep">•</span>
+          <a href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">Discord</a>
+          <span class="footer-sep">•</span>
+          <a href="https://www.reddit.com/r/Jibo/" target="_blank" rel="noreferrer">Reddit</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="site-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
