@@ -31,27 +31,27 @@ if (commitList && typeof commits !== "undefined") {
     const card = document.createElement("article");
     card.className = "timeline-card";
 
-  const authorsText = (entry.authors || [])
-    .map((id) => authors[id]?.name)
-    .filter(Boolean)
-    .join(", ");
+    const authorsText = (entry.authors || [])
+      .map((id) => authors[id]?.name)
+      .filter(Boolean)
+      .join(", ");
 
-  const chipMarkup = (entry.categories || [])
-    .map((category) => `<span class="chip">${category}</span>`)
-    .join("");
+    const chipMarkup = (entry.categories || [])
+      .map((category) => `<span class="chip">${category}</span>`)
+      .join("");
 
-  const formattedDate = new Date(`${entry.date}T12:00:00`).toLocaleDateString("en-CA", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+    const formattedDate = new Date(`${entry.date}T12:00:00`).toLocaleDateString("en-CA", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
 
-  card.innerHTML = `
-    <p class="timeline-card__meta">${formattedDate}</p>
-    <div class="timeline-card__chips">${chipMarkup}</div>
-    <h3>${entry.summary}</h3>
-    ${authorsText ? `<p class="timeline-card__authors">By ${authorsText}</p>` : ""}
-  `;
+    card.innerHTML = `
+      <p class="timeline-card__meta">${formattedDate}</p>
+      <div class="timeline-card__chips">${chipMarkup}</div>
+      <h3>${entry.summary}</h3>
+      ${authorsText ? `<p class="timeline-card__authors">By ${authorsText}</p>` : ""}
+    `;
 
     commitList.appendChild(card);
   });
@@ -63,21 +63,21 @@ if (helpersGrid && typeof authors !== "undefined") {
     const card = document.createElement(authorUrl ? "a" : "article");
     card.className = "helper-card";
 
-  if (authorUrl) {
-    card.href = authorUrl;
-    card.target = "_blank";
-    card.rel = "noreferrer";
-  }
+    if (authorUrl) {
+      card.href = authorUrl;
+      card.target = "_blank";
+      card.rel = "noreferrer";
+    }
 
-  const avatar = usableUrl(author.pfp)
-    ? `<img src="${author.pfp}" alt="${author.initials}" />`
-    : `<span>${author.initials}</span>`;
+    const avatar = usableUrl(author.pfp)
+      ? `<img src="${author.pfp}" alt="${author.initials}" />`
+      : `<span>${author.initials}</span>`;
 
-  card.innerHTML = `
-    <div class="helper-card__avatar">${avatar}</div>
-    <h3>${author.name}</h3>
-    <p>${author.role || "Community Supporter"}</p>
-  `;
+    card.innerHTML = `
+      <div class="helper-card__avatar">${avatar}</div>
+      <h3>${author.name}</h3>
+      <p>${author.role || "Community Supporter"}</p>
+    `;
 
     helpersGrid.appendChild(card);
   });
