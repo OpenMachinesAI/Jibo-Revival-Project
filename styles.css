@@ -661,7 +661,7 @@ body[data-theme="aero"] .footer {
 
 .files-hero {
   margin: 18px 0 18px;
-  padding: 28px;
+  padding: 22px 24px 24px;
   border-radius: 12px;
   border: 1px solid rgba(240, 221, 149, 0.16);
   background:
@@ -680,7 +680,7 @@ body[data-theme="aero"] .footer {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   border: 1px solid rgba(240, 221, 149, 0.2);
   border-bottom: 0;
   border-radius: 8px 8px 0 0;
@@ -693,27 +693,30 @@ body[data-theme="aero"] .footer {
 }
 
 .files-hero__stamp {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: #f0dd95;
-  font-size: 0.76rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
 }
 
 .files-hero h1 {
   margin: 0;
+  max-width: 8ch;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  font-size: clamp(2.4rem, 6vw, 4.1rem);
+  line-height: 0.88;
+  letter-spacing: -0.08em;
+  color: #f6ecd0;
 }
 
 .files-hero__lede {
   max-width: 70ch;
-  margin: 14px 0 0;
+  margin: 16px 0 0;
   color: #d5ccae;
-  line-height: 1.65;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .files-hero__meta {
@@ -765,8 +768,8 @@ body[data-theme="aero"] .footer {
 .archive-side__value {
   margin: 0;
   font-family: "Syne", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1;
+  font-size: 1.15rem;
+  line-height: 1.05;
 }
 
 .archive-side__redactions {
@@ -796,7 +799,7 @@ body[data-theme="aero"] .footer {
 }
 
 .archive-panel {
-  padding: 22px;
+  padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(240, 221, 149, 0.14);
   background:
@@ -867,8 +870,8 @@ body[data-theme="aero"] .footer {
 .repo-card h3 {
   margin: 0 0 10px;
   font-family: "Syne", sans-serif;
-  font-size: 1.28rem;
-  line-height: 1.08;
+  font-size: 1.08rem;
+  line-height: 1.12;
 }
 
 .file-card p,
@@ -887,6 +890,7 @@ body[data-theme="aero"] .footer {
   line-height: 1.7;
   columns: 2;
   column-gap: 34px;
+  font-size: 0.96rem;
 }
 
 .file-card {
