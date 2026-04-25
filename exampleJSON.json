@@ -1,0 +1,139 @@
+{
+  "mirrors": [
+    {
+      "id": "openjiboos-official",
+      "name": "OpenJiboOS Official",
+      "location": "US",
+      "type": "OpenJiboOS",
+      "baseUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionTag": "v1.0.0",
+          "name": "OpenJiboOS v1.0.0 - Stable Release",
+          "description": "Initial stable release of OpenJiboOS with full functionality restored.\n\n## Features\n- Core system services\n- Basic motor control\n- Voice recognition\n- LED animations\n- WiFi connectivity\n\n## Changelog\n- Fixed boot sequence\n- Improved memory management\n- Added support for custom skills\n\n#!JiboOSR:9823471|RC|NW|IP#",
+          "releaseDate": "2024-01-15T10:00:00Z",
+          "preRelease": false,
+          "downloadUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/download/v1.0.0/openjiboos-1.0.0.zip",
+          "repoUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/tag/v1.0.0",
+          "releaseId": "9823471",
+          "tags": ["RC", "NW", "IP"],
+          "fileSize": "45.2 MB",
+          "checksum": "sha256:a1b2c3d4e5f6..."
+        },
+        {
+          "version": "1.1.0-beta",
+          "versionTag": "v1.1.0-beta",
+          "name": "OpenJiboOS v1.1.0 Beta",
+          "description": "Beta release with experimental features and improvements.\n\n## New Features\n- Enhanced voice commands\n- Improved motor control precision\n- New LED pattern animations\n- Bug fixes for audio processing\n\n## Known Issues\n- Occasional WiFi disconnection\n- Memory leak in skill loader\n\n#!JiboOSR:9823472|NT|NW|BF|IP#",
+          "releaseDate": "2024-02-01T14:30:00Z",
+          "preRelease": true,
+          "downloadUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/download/v1.1.0-beta/openjiboos-1.1.0-beta.zip",
+          "repoUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/tag/v1.1.0-beta",
+          "releaseId": "9823472",
+          "tags": ["NT", "NW", "BF", "IP"],
+          "fileSize": "47.8 MB",
+          "checksum": "sha256:b2c3d4e5f6g7..."
+        },
+        {
+          "version": "1.2.0",
+          "versionTag": "v1.2.0",
+          "name": "OpenJiboOS v1.2.0 - Major Update",
+          "description": "Major update with breaking changes for better architecture.\n\n⚠️ **WARNING: This release contains breaking changes!**\n\n## Breaking Changes\n- New API structure (v2)\n- Deprecated old skill format\n- Changed configuration file format\n\n## Improvements\n- Refactored core architecture\n- 50% faster boot time\n- Enhanced security model\n- New plugin system\n\n#!JiboOSR:9823473|BC|RF|RC|IP#",
+          "releaseDate": "2024-02-20T09:15:00Z",
+          "preRelease": false,
+          "downloadUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/download/v1.2.0/openjiboos-1.2.0.zip",
+          "repoUrl": "https://github.com/Jibo-Revival-Group/OpenJiboOS/releases/tag/v1.2.0",
+          "releaseId": "9823473",
+          "tags": ["BC", "RF", "RC", "IP"],
+          "fileSize": "52.1 MB",
+          "checksum": "sha256:c3d4e5f6g7h8..."
+        }
+      ]
+    },
+    {
+      "id": "openjiboos-mirror-gr",
+      "name": "OpenJiboOS Greece Mirror",
+      "location": "GR",
+      "type": "OpenJiboOS",
+      "baseUrl": "https://kevinblog.sytes.net/Code/Jibo-Revival-Group/OpenJiboOS",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionTag": "v1.0.0",
+          "name": "OpenJiboOS v1.0.0 - Stable Release",
+          "description": "Initial stable release of OpenJiboOS with full functionality restored.\n\n## Features\n- Core system services\n- Basic motor control\n- Voice recognition\n- LED animations\n- WiFi connectivity\n\n#!JiboOSR:9823471|RC|NW|IP#",
+          "releaseDate": "2024-01-15T10:00:00Z",
+          "preRelease": false,
+          "downloadUrl": "https://kevinblog.sytes.net/Code/Jibo-Revival-Group/OpenJiboOS/releases/download/v1.0.0/openjiboos-1.0.0.zip",
+          "repoUrl": "https://kevinblog.sytes.net/Code/Jibo-Revival-Group/OpenJiboOS/releases/tag/v1.0.0",
+          "releaseId": "9823471",
+          "tags": ["RC", "NW", "IP"],
+          "fileSize": "45.2 MB",
+          "checksum": "sha256:a1b2c3d4e5f6..."
+        }
+      ]
+    },
+    {
+      "id": "jibo-server-official",
+      "name": "Jibo Server Official",
+      "location": "US",
+      "type": "Server",
+      "baseUrl": "https://github.com/Jibo-Revival-Group/JiboServer",
+      "releases": [
+        {
+          "version": "2.0.0",
+          "versionTag": "v2.0.0",
+          "name": "Jibo Server v2.0.0",
+          "description": "Community server implementation for Jibo.\n\n## Features\n- Skill hosting\n- Voice command processing\n- User authentication\n- Analytics dashboard\n\n#!JiboOSR:1234567|RC|NW|RT#",
+          "releaseDate": "2024-01-20T16:00:00Z",
+          "preRelease": false,
+          "downloadUrl": "https://github.com/Jibo-Revival-Group/JiboServer/releases/download/v2.0.0/jibo-server-2.0.0.zip",
+          "repoUrl": "https://github.com/Jibo-Revival-Group/JiboServer/releases/tag/v2.0.0",
+          "releaseId": "1234567",
+          "tags": ["RC", "NW", "RT"],
+          "fileSize": "128.5 MB",
+          "checksum": "sha256:d4e5f6g7h8i9..."
+        }
+      ]
+    },
+    {
+      "id": "jibo-recommender",
+      "name": "Jibo Recommender",
+      "location": "US",
+      "type": "Recommender",
+      "baseUrl": "https://github.com/Jibo-Revival-Group/JiboRecommender",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionTag": "v1.0.0",
+          "name": "Jibo Recommender v1.0.0",
+          "description": "AI-powered recommendation system for Jibo.\n\n## Features\n- Personalized suggestions\n- Context-aware responses\n- Learning algorithms\n\n#!JiboOSR:2345678|RC|NW|IP#",
+          "releaseDate": "2024-03-01T12:00:00Z",
+          "preRelease": false,
+          "downloadUrl": "https://github.com/Jibo-Revival-Group/JiboRecommender/releases/download/v1.0.0/jibo-recommender-1.0.0.zip",
+          "repoUrl": "https://github.com/Jibo-Revival-Group/JiboRecommender/releases/tag/v1.0.0",
+          "releaseId": "2345678",
+          "tags": ["RC", "NW", "IP"],
+          "fileSize": "89.3 MB",
+          "checksum": "sha256:e5f6g7h8i9j0..."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-03-15T10:00:00Z",
+    "version": "1.0.0",
+    "source": "https://raw.githubusercontent.com/Jibo-Revival-Group/Official-Endpoints/main/OpenJiboOS-Mirrors.json"
+  },
+  "releaseTypes": {
+    "NT": { "label": "Nightly", "color": "#9333ea", "description": "Development build" },
+    "BF": { "label": "Bug Fix", "color": "#059669", "description": "Bug fixes only" },
+    "RC": { "label": "Recommended", "color": "#0ea5e9", "description": "Stable release" },
+    "RT": { "label": "Remote", "color": "#f59e0b", "description": "For remote servers" },
+    "NW": { "label": "New Features", "color": "#10b981", "description": "New functionality" },
+    "IP": { "label": "Improvements", "color": "#3b82f6", "description": "Enhancements" },
+    "RF": { "label": "Refactored", "color": "#8b5cf6", "description": "Code refactoring" },
+    "BC": { "label": "Breaking Change", "color": "#ef4444", "description": "May break compatibility", "warning": true }
+  }
+}

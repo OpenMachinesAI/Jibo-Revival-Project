@@ -6,138 +6,176 @@
     <title>Releases - Jibo Revival Project</title>
     <meta
       name="description"
-      content="Download official Jibo OS releases, mod tools, and other software from multiple mirror sources."
+      content="Download official Jibo OS releases, servers, and tools from verified mirror sources."
     />
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <script type="module">
+      import 'https://esm.run/@material/web@1.0.0/all.js';
+    </script>
+    <link rel="stylesheet" href="releases-material.css" />
   </head>
   <body>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Open theme menu" aria-expanded="false">
-      <span aria-hidden="true">â¡</span>
-    </button>
-    <div class="theme-menu" id="theme-menu" hidden>
-      <button type="button" class="theme-menu__item" data-theme="default">Default</button>
-      <button type="button" class="theme-menu__item" data-theme="aero">Frutiogo Aero</button>
-    </div>
-    <div class="page-shell">
-      <header class="hero">
-        <nav class="topbar">
-          <a class="brand" href="index.html">
-            <img class="brand__logo" src="logo.svg" alt="" aria-hidden="true" />
-            <span>Jibo Revival Project</span>
-          </a>
-          <div class="topbar__links">
-            <a href="index.html">Home</a>
-            <a href="files.html">Files</a>
-            <a href="docs.html">Docs</a>
-            <a href="releases.html" class="active">Releases</a>
-          </div>
+    <!-- Fullscreen Top Bar -->
+    <header class="app-bar">
+      <div class="app-bar-content">
+        <a href="index.html" class="brand">
+          <img src="logo.svg" alt="Jibo Revival" class="brand-logo" />
+          <span class="brand-text">Jibo Revival</span>
+        </a>
+        
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="files.html">Files</a>
+          <a href="docs.html">Docs</a>
+          <a href="releases.html" class="active">Releases</a>
         </nav>
+      </div>
+    </header>
 
-        <section class="hero__content">
-          <div class="hero__copy">
-            <p class="eyebrow">Software Downloads</p>
-            <h1>Official Jibo Releases</h1>
-            <p class="hero__lede">
-              Download Jibo OS, mod tools, and other software from multiple verified mirror sources. 
-              All releases are checked for authenticity and include detailed metadata.
-            </p>
-          </div>
-        </section>
-      </header>
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-bar-content">
+        <md-outlined-select id="type-select" label="Software Type">
+          <md-select-option value="all">
+            <div slot="headline">All Types</div>
+          </md-select-option>
+          <md-select-option value="OpenJiboOS" selected>
+            <div slot="headline">OpenJiboOS</div>
+          </md-select-option>
+          <md-select-option value="Server">
+            <div slot="headline">Server</div>
+          </md-select-option>
+          <md-select-option value="Recommender">
+            <div slot="headline">Recommender</div>
+          </md-select-option>
+          <md-select-option value="Skills">
+            <div slot="headline">Skills</div>
+          </md-select-option>
+          <md-select-option value="Tools">
+            <div slot="headline">Tools</div>
+          </md-select-option>
+        </md-outlined-select>
 
-      <main>
-        <section class="panel panel--releases">
-          <div class="section-heading">
-            <p class="eyebrow">Categories</p>
-            <h2>Select a software category</h2>
-          </div>
-          
-          <div class="category-tabs" id="category-tabs">
-            <button class="category-tab active" data-category="jibo-os">Jibo OS</button>
-            <button class="category-tab" data-category="jibo-mod">Jibo Mod Tool</button>
-            <button class="category-tab disabled" data-category="server" disabled>Server Code</button>
-            <button class="category-tab disabled" data-category="skills" disabled>Skills</button>
-            <button class="category-tab disabled" data-category="other" disabled>Other</button>
-          </div>
+        <md-outlined-select id="version-select" label="Version">
+          <md-select-option value="all">
+            <div slot="headline">All Versions</div>
+          </md-select-option>
+        </md-outlined-select>
 
-          <div class="releases-container">
-            <div class="loading-message" id="loading-message">
-              <div class="spinner"></div>
-              <p>Loading releases...</p>
-            </div>
-            
-            <div class="releases-list" id="releases-list" style="display: none;">
-              <!-- Releases will be populated here -->
-            </div>
-          </div>
-        </section>
+        <md-outlined-select id="location-select" label="Location">
+          <md-select-option value="all">
+            <div slot="headline">All Locations</div>
+          </md-select-option>
+          <md-select-option value="US">
+            <div slot="headline">🇺🇸 United States</div>
+          </md-select-option>
+          <md-select-option value="GR">
+            <div slot="headline">🇬🇷 Greece</div>
+          </md-select-option>
+        </md-outlined-select>
 
-        <section class="panel panel--legend">
-          <div class="section-heading">
-            <p class="eyebrow">Legend</p>
-            <h2>Understanding release tags</h2>
-          </div>
-          
-          <div class="legend-grid">
-            <div class="legend-item">
-              <span class="legend-icon">ð</span>
-              <div>
-                <strong>Location</strong>
-                <p>Server location: GR (Greece), US (United States)</p>
-              </div>
-            </div>
-            <div class="legend-item">
-              <span class="legend-icon">â</span>
-              <div>
-                <strong>Verified</strong>
-                <p>Release matches official database entry</p>
-              </div>
-            </div>
-            <div class="legend-item">
-              <span class="legend-icon">â </span>
-              <div>
-                <strong>Breaking Change</strong>
-                <p>May contain breaking changes (BC tag)</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="release-types">
-            <h3>Release Types</h3>
-            <div class="type-tags">
-              <span class="type-tag">NT - Nightly</span>
-              <span class="type-tag">BF - Bug Fix</span>
-              <span class="type-tag">RC - Recommended</span>
-              <span class="type-tag">RT - Remote</span>
-              <span class="type-tag">NW - New Features</span>
-              <span class="type-tag">IP - Improvements</span>
-              <span class="type-tag">RF - Refactored</span>
-              <span class="type-tag bc">BC - Breaking Change</span>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p>© 2026 Jibo Revival Project</p>
-        <p>
-          Contact:
-          <a href="mailto:kevinkor6346789@gmail.com">kevinkor6346789@gmail.com</a>
-          <span class="footer-sep">â¢</span>
-          <a href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">Discord</a>
-          <span class="footer-sep">â¢</span>
-          <a href="https://www.reddit.com/r/Jibo/" target="_blank" rel="noreferrer">Reddit</a>
-        </p>
-      </footer>
+        <md-filled-button id="refresh-btn">
+          <md-icon slot="icon">refresh</md-icon>
+          Refresh
+        </md-filled-button>
+      </div>
     </div>
 
-    <script src="releases.js"></script>
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-header">
+        <h1 class="md-typescale-headline-large">Software Releases</h1>
+        <p class="md-typescale-body-large description">
+          Download official releases from verified mirror sources. 
+          Each release includes version info, release tags, and authenticity verification.
+        </p>
+      </div>
+
+      <!-- Loading State -->
+      <div class="loading-container" id="loading-container">
+        <md-circular-progress indeterminate></md-circular-progress>
+        <p class="md-typescale-body-medium">Loading releases...</p>
+      </div>
+
+      <!-- Error State -->
+      <div class="error-container" id="error-container" style="display: none;">
+        <md-icon class="error-icon">error_outline</md-icon>
+        <p class="md-typescale-body-large">Failed to load releases</p>
+        <p class="md-typescale-body-medium error-message" id="error-message"></p>
+        <md-outlined-button id="retry-btn">Retry</md-outlined-button>
+      </div>
+
+      <!-- Releases List -->
+      <div class="releases-container" id="releases-container" style="display: none;">
+        <div class="releases-list" id="releases-list">
+          <!-- Releases will be populated here -->
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-container" id="empty-container" style="display: none;">
+        <md-icon class="empty-icon">inbox</md-icon>
+        <p class="md-typescale-body-large">No releases found</p>
+        <p class="md-typescale-body-medium">Try adjusting your filters</p>
+      </div>
+    </main>
+
+    <!-- Legend Section -->
+    <section class="legend-section">
+      <div class="legend-content">
+        <h2 class="md-typescale-title-large">Release Tags</h2>
+        <div class="legend-grid">
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #0ea5e920; color: #0ea5e9;">RC</span>
+            <span class="legend-text">Recommended - Stable release</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #9333ea20; color: #9333ea;">NT</span>
+            <span class="legend-text">Nightly - Development build</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #05966920; color: #059669;">BF</span>
+            <span class="legend-text">Bug Fix - Bug fixes only</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #10b98120; color: #10b981;">NW</span>
+            <span class="legend-text">New Features - New functionality</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #3b82f620; color: #3b82f6;">IP</span>
+            <span class="legend-text">Improvements - Enhancements</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #8b5cf620; color: #8b5cf6;">RF</span>
+            <span class="legend-text">Refactored - Code refactoring</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge" style="background: #f59e0b20; color: #f59e0b;">RT</span>
+            <span class="legend-text">Remote - For remote servers</span>
+          </div>
+          <div class="legend-item">
+            <span class="tag-badge warning" style="background: #ef444420; color: #ef4444;">⚠ BC</span>
+            <span class="legend-text">Breaking Change - May break compatibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p> 2026 Jibo Revival Project</p>
+      <div class="footer-links">
+        <a href="mailto:kevinkor6346789@gmail.com">Contact</a>
+        <span>•</span>
+        <a href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">Discord</a>
+        <span>•</span>
+        <a href="https://www.reddit.com/r/Jibo/" target="_blank" rel="noreferrer">Reddit</a>
+      </div>
+    </footer>
+
+    <script src="releases-material.js"></script>
   </body>
 </html>
