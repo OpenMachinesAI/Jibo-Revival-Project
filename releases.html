@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Releases - Jibo Revival Project</title>
+    <meta
+      name="description"
+      content="Download official Jibo OS releases, mod tools, and other software from multiple mirror sources."
+    />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Open theme menu" aria-expanded="false">
+      <span aria-hidden="true">â¡</span>
+    </button>
+    <div class="theme-menu" id="theme-menu" hidden>
+      <button type="button" class="theme-menu__item" data-theme="default">Default</button>
+      <button type="button" class="theme-menu__item" data-theme="aero">Frutiogo Aero</button>
+    </div>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <a class="brand" href="index.html">
+            <img class="brand__logo" src="logo.svg" alt="" aria-hidden="true" />
+            <span>Jibo Revival Project</span>
+          </a>
+          <div class="topbar__links">
+            <a href="index.html">Home</a>
+            <a href="files.html">Files</a>
+            <a href="docs.html">Docs</a>
+            <a href="releases.html" class="active">Releases</a>
+          </div>
+        </nav>
+
+        <section class="hero__content">
+          <div class="hero__copy">
+            <p class="eyebrow">Software Downloads</p>
+            <h1>Official Jibo Releases</h1>
+            <p class="hero__lede">
+              Download Jibo OS, mod tools, and other software from multiple verified mirror sources. 
+              All releases are checked for authenticity and include detailed metadata.
+            </p>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="panel panel--releases">
+          <div class="section-heading">
+            <p class="eyebrow">Categories</p>
+            <h2>Select a software category</h2>
+          </div>
+          
+          <div class="category-tabs" id="category-tabs">
+            <button class="category-tab active" data-category="jibo-os">Jibo OS</button>
+            <button class="category-tab" data-category="jibo-mod">Jibo Mod Tool</button>
+            <button class="category-tab disabled" data-category="server" disabled>Server Code</button>
+            <button class="category-tab disabled" data-category="skills" disabled>Skills</button>
+            <button class="category-tab disabled" data-category="other" disabled>Other</button>
+          </div>
+
+          <div class="releases-container">
+            <div class="loading-message" id="loading-message">
+              <div class="spinner"></div>
+              <p>Loading releases...</p>
+            </div>
+            
+            <div class="releases-list" id="releases-list" style="display: none;">
+              <!-- Releases will be populated here -->
+            </div>
+          </div>
+        </section>
+
+        <section class="panel panel--legend">
+          <div class="section-heading">
+            <p class="eyebrow">Legend</p>
+            <h2>Understanding release tags</h2>
+          </div>
+          
+          <div class="legend-grid">
+            <div class="legend-item">
+              <span class="legend-icon">ð</span>
+              <div>
+                <strong>Location</strong>
+                <p>Server location: GR (Greece), US (United States)</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-icon">â</span>
+              <div>
+                <strong>Verified</strong>
+                <p>Release matches official database entry</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-icon">â </span>
+              <div>
+                <strong>Breaking Change</strong>
+                <p>May contain breaking changes (BC tag)</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="release-types">
+            <h3>Release Types</h3>
+            <div class="type-tags">
+              <span class="type-tag">NT - Nightly</span>
+              <span class="type-tag">BF - Bug Fix</span>
+              <span class="type-tag">RC - Recommended</span>
+              <span class="type-tag">RT - Remote</span>
+              <span class="type-tag">NW - New Features</span>
+              <span class="type-tag">IP - Improvements</span>
+              <span class="type-tag">RF - Refactored</span>
+              <span class="type-tag bc">BC - Breaking Change</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© 2026 Jibo Revival Project</p>
+        <p>
+          Contact:
+          <a href="mailto:kevinkor6346789@gmail.com">kevinkor6346789@gmail.com</a>
+          <span class="footer-sep">â¢</span>
+          <a href="https://discord.gg/CxXBGMrrNG" target="_blank" rel="noreferrer">Discord</a>
+          <span class="footer-sep">â¢</span>
+          <a href="https://www.reddit.com/r/Jibo/" target="_blank" rel="noreferrer">Reddit</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="releases.js"></script>
+  </body>
+</html>
