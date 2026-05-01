@@ -246,10 +246,6 @@ _readQR(encoded);
         a.click();
       }
 
-      _readQR(`1/1
-ZI
-e!Ekiaon*%O?'O`);
-
       function _readQR(barcode) {
                 var metaEnd = barcode.indexOf('\n');
                 var metaData = barcode.substring(0, metaEnd).split('/');
